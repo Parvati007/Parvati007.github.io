@@ -1,0 +1,143 @@
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: black;
+    }
+
+html {
+      scroll-behavior: smooth;
+
+     }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color:rgb(3, 102, 53);
+      overflow: hidden;
+      padding: 20px 20px;
+      z-index: 1000;
+
+    }
+
+    .navbar .logo {
+      float: left;
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .navbar .nav-links {
+      float: right;
+      
+    }
+
+    .navbar .nav-links a {
+      text-decoration: none;
+      color: white;
+      margin-left: 15px;
+      font-size: 19px;
+      
+    }
+
+    .navbar .nav-links a:hover {
+      
+      color: greenyellow;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      padding: 100px 20px 80px 20px;
+    }
+
+    .box {
+      display: inline-block;
+      width: 45%;
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin: 10px;
+      vertical-align: top;
+      border-radius: 8px;
+    }
+
+    .box h2 {
+      margin-top: 0;
+    }
+
+    .btn {
+      background-color: rgb(3, 102, 53);
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: rgb(10, 199, 232);
+    }
+
+     .row {
+      padding: 100px;
+      height: 75%;
+    }
+
+    .row .box {
+      padding: 20px;
+      margin: 10px;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        margin: 0px;
+        background-color: black;
+        color: white;
+        font-size: large;
+        z-index: 1000;
+    }
+
+    button {
+      background-color: teal;
+      padding: 10px;
+      color: white;
+      border: none;
+      border-radius: 10%;
+    }
+
+   #logo{
+    background-color: black;
+    padding: 30px;
+    align-items: center;
+  
+   }
+
+   #pic{
+    align-items: center;
+    padding:10px;
+    justify-content: center;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+   }
+
+   #pic:hover {
+   transform: scale(1.1);
+   }
+
+   .l1{
+    transition: transform 0.2s ease-in-out;
+   }
+
+   .l1:hover{
+    transform: scale(1.2);
+   }
+
+   #ab{
+    color:white;
+    background-color: black;
+    padding:30px;
+   }
