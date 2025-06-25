@@ -19,3 +19,5 @@ db.employees.insertMany([{
 
 }])
 
+db.employees.find({department:{$in:["Admin","HR"]}})  //IN operator
+db.employees.find({department:{$nin:["Admin","HR"]}}) //NOT IN operstor 
