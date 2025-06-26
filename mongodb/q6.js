@@ -48,6 +48,8 @@ db.employees.aggregate([
     {$project:{name:0}},
 ])
 
+//-------------------------------------------------
+//GROUP
 db.employees.aggregate([
     {$group:{
         _id:"$department",
@@ -62,6 +64,19 @@ db.employees.aggregate([
     }}
 ])
 
+//country,name,Score
+//india,krish,20
+//india,jay,40
+//uk,ankit,40
+
+db.employees.aggregate([
+    {$group:{
+        _id:{country:"$country",name:"$name"},
+        total:{$sum:"$score"}
+    }}
+])
+
+//--------------------------------------------------
 
 //create new collections named orders
 //_id:
