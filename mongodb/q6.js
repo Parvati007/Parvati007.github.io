@@ -117,6 +117,76 @@ db.employees.aggregate([
     
 ])
 
+//create new collection empCountry containing country
+
+db.empCountry.insertOne(
+    {
+        empId:ObjectId('685a8a5ca384c5b95c748a5f')
+        ,Country:"India"
+    }
+)
+
+db.empCountry.insertOne(
+    {
+        empId:ObjectId('685bb9158e58b4721e748a5f')
+        ,Country:"America"
+    }
+)
+
+db.empCountry.insertOne(
+    {
+        empId:ObjectId('685bb9158e58b4721e748a60')
+        ,Country:"Europe"
+    }
+)
+
+db.empCountry.insertOne(
+    {
+        empId:ObjectId('685bc9b78e58b4721e748a65')
+        ,Country:"Antartica"
+    }
+)
+
+db.empCountry.insertOne(
+    {
+        empId: ObjectId('685bc9b78e58b4721e748a66')
+        ,Country:"Florida"
+    }
+)
+
+db.employees.aggregate([
+    {$lookup:
+    {
+        from:"orders",
+        localField:"_id",
+        foreignField:"empId",
+        as:"orders",
+    }},
+
+    {$lookup:
+    {
+        from:"empCoutry",
+        localField:"_id",
+        foreignField:"empId",
+        as:"Country",
+    }},
+
+    {$unwind:"$orders"},
+    {$project:{name:1,salary:1,"empCountry.Country":1,"orders.orderValue":1}},
+    
+])
+
+//-------------------------------------------------------------------------------
+//INDEXING.....searching becomes easy
+db.employees.createIndex({"email":1})   //create index
+db.employees.getIndexes()               //get index
+db.employees.dropIndex("email_1")       // drop index
+
+db.employees.find({email:"john@gmail.com"}).explain("executionStats")
+
+
+
+
 
 
 
