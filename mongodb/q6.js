@@ -66,8 +66,11 @@ db.employees.aggregate([
 
 //country,name,Score
 //india,krish,20
-//india,jay,40
-//uk,ankit,40
+//india,krish,21
+//india,krish,22
+//uk,john,21
+//uk,john,25
+//uk,john,22
 
 db.employees.aggregate([
     {$group:{
@@ -132,7 +135,7 @@ db.employees.aggregate([
     
 ])
 
-//create new collection empCountry containing country
+//create new collection empCountry containing Country
 
 db.empCountry.insertOne(
     {
