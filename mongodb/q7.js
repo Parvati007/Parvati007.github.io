@@ -206,12 +206,28 @@ db.marks.aggregate([
     {$group:{
         _id:"$term",
         AvgScore:{$avg:"$score"}
-    }}
+    }},
+    {$sort:{_id:1}}
+])
+//display average score by subject wise
+db.marks.aggregate([
+    {$group:{
+        _id:"$subject",
+        AvgScore:{$avg:"$score"}
+    }},
+    {$sort:{_id:1}}
 ])
 //display with name and termwise avg score
 db.marks.aggregate([
     {$group:{
         _id:{name:"$name",term:"$term"},
+        AvgScore:{$avg:"$score"}
+    }}
+])
+//display with term and subject avg score
+db.marks.aggregate([
+    {$group:{
+        _id:{term:"$term",subject:"$subject"},
         AvgScore:{$avg:"$score"}
     }}
 ])
