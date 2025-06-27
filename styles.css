@@ -269,32 +269,5 @@ html {
   }
 }
 
-/* 🖥️ Desktop Devices (min-width: 1200px) */
-@media screen and (min-width: 1200px) {
-  body {
-    font-size: 18px;
-  }
 
-  h1 {
-    font-size: 100px;
-    background-color: green;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .box {
-    width: 45%;
-  }
-
-  .nav-links a {
-    font-size: 20px;
-  }
-
-  #logo img {
-    width: 120px;
-  }
-}
 
