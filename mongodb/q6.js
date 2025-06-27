@@ -183,10 +183,10 @@ db.employees.aggregate([
 
     {$lookup:
     {
-        from:"empCoutry",
+        from:"empCountry",
         localField:"_id",
         foreignField:"empId",
-        as:"Country",
+        as:"empCountry",
     }},
 
     {$unwind:"$orders"},
