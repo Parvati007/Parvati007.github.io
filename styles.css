@@ -1,4 +1,4 @@
- body {
+body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: black;
@@ -188,100 +188,113 @@ html {
    transform: scale(1.1);
    }
 
-/* ========================== */
-/* === Responsive Design === */
-/* ========================== */
 
-/* Tablets (width ≤ 992px) */
-@media (max-width: 992px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
+   /* 📱 Mobile Devices (min-width: 300px) */
+@media screen and (min-width: 300px) {
+  body {
+    font-size: 14px;
   }
 
-  .navbar .nav-links {
-    float: none;
-    display: flex;
+  h1 {
+    font-size: 20px;
+    background-color: red;
+  }
+
+  .navbar {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .box {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  #logo img {
+    width: 80px;
+    height: auto;
+  }
+
+  .btn, button {
     width: 100%;
     margin-top: 10px;
   }
 
-  .navbar .nav-links a {
-    margin: 10px 0;
-    font-size: 18px;
-  }
-
-  .container {
-    padding: 100px 15px 80px 15px;
-  }
-
-  .box {
-    width: 90% !important;
-    display: block;
-  }
-
+  .proj-img img,
   #pic img {
     width: 100%;
     height: auto;
   }
-
-  .proj-img img {
-    width: 100%;
-    height: auto;
-  }
-
-  #logo img {
-    width: 90px;
-    height: 90px;
-  }
 }
 
-/* Mobile Phones (width ≤ 600px) */
-@media (max-width: 600px) {
-  .navbar .logo {
-    font-size: 22px;
+/* 💻 Tablet Devices (min-width: 600px) */
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 16px;
   }
 
-  .navbar .nav-links a {
-    font-size: 16px;
+  h1 {
+    font-size: 50px;
+    background-color: blue;
   }
 
   .box {
-    padding: 15px;
-    margin: 8px;
-    width: 100% !important;
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1%;
   }
 
-  h1, h2, h3 {
-    font-size: 1.3rem;
+  .nav-links a {
+    font-size: 18px;
   }
 
-  .btn,
-  button {
-    width: 100%;
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  input, textarea {
-    width: 100%;
-    font-size: 16px;
-  }
-
-  #skills {
-    font-size: 14px;
+  .btn, button {
+    width: auto;
   }
 
   #logo img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .row {
-    padding: 30px;
+    width: 100px;
   }
 }
 
-   
+/* 🖥️ Desktop Devices (min-width: 1200px) */
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 100px;
+    background-color: green;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .box {
+    width: 45%;
+  }
+
+  .nav-links a {
+    font-size: 20px;
+  }
+
+  #logo img {
+    width: 120px;
+  }
+}
+
