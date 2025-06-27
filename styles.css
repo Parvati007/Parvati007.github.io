@@ -188,6 +188,100 @@ html {
    transform: scale(1.1);
    }
 
+/* ========================== */
+/* === Responsive Design === */
+/* ========================== */
 
+/* Tablets (width ≤ 992px) */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .navbar .nav-links {
+    float: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar .nav-links a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 100px 15px 80px 15px;
+  }
+
+  .box {
+    width: 90% !important;
+    display: block;
+  }
+
+  #pic img {
+    width: 100%;
+    height: auto;
+  }
+
+  .proj-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  #logo img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Mobile Phones (width ≤ 600px) */
+@media (max-width: 600px) {
+  .navbar .logo {
+    font-size: 22px;
+  }
+
+  .navbar .nav-links a {
+    font-size: 16px;
+  }
+
+  .box {
+    padding: 15px;
+    margin: 8px;
+    width: 100% !important;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.3rem;
+  }
+
+  .btn,
+  button {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  input, textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  #skills {
+    font-size: 14px;
+  }
+
+  #logo img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .row {
+    padding: 30px;
+  }
+}
 
    
