@@ -1,3 +1,5 @@
+//PRACTICE OF LOOKUP AND GROUP OPERATION
+
 //posts collection
 //_id-post
 //p1-Post1
@@ -222,15 +224,28 @@ db.marks.aggregate([
     {$group:{
         _id:{name:"$name",term:"$term"},
         AvgScore:{$avg:"$score"}
-    }}
+    }},
+    {$sort:{_id:1}},
+
 ])
 //display with term and subject avg score
 db.marks.aggregate([
     {$group:{
         _id:{term:"$term",subject:"$subject"},
         AvgScore:{$avg:"$score"}
-    }}
+    }},
+    {$sort:{_id:1}},
 ])
+//only john's termwise avg
+db.marks.aggregate([
+    {$match:{name:"John"}},
+    {$group:{
+        _id:{name:"$name",term:"$term"},
+        AvgScore:{$avg:"$score"}
+    }},
+    {$sort:{_id:1}}
+])
+
 
 
 
