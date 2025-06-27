@@ -246,6 +246,70 @@ db.marks.aggregate([
     {$sort:{_id:1}}
 ])
 
+//------------------------------------------------------
+
+//studentInfo
+//_id,name
+//s1,John
+//s2,Cathy
+
+//marks
+//sid,term,subject,score
+//s1,t1,maths,98
+//s1,t2,maths,90
+//s1,t3,maths,88
+//s1,t1,science,92
+//s1,t2,science,82
+//s1,t3,science,82
+//s2,t1,maths,92
+//s2,t2,maths,92
+//s2,t3,maths,82
+//s2,t1,science,92
+//s2,t2,science,82
+//s2,t3,science,80
+
+db.studentInfo.insertMany([
+    {
+        _id:"s1",
+        name:"John",
+    },
+    {
+        _id:"s2",
+        name:"Cathy",
+    },
+
+])
+
+db.marks.updateMany(
+    {},
+    {$rename:{name:"sid"}}   
+)
+db.marks.updateMany(
+    {sid:"John"},{$set:{sid:"s1"}} ,  
+);
+db.marks.updateMany(
+    {sid:"Cathy"},{$set:{sid:"s2"}} ,  
+);
+
+db.studentInfo.aggregate([
+  {$match:{name:"John"}},
+    {$lookup:
+        {
+        from:"marks",
+        localField:"_id",
+        foreignField:"sid",
+        as:"marks",
+    }},
+
+    {$unwind:"$marks"},
+    {$group:
+        {
+        _id:"$marks.term",
+        AvgScore:{$avg:"$marks.score"}
+    }},
+   
+])
+
 
 
 
