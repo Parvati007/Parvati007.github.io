@@ -1,3 +1,7 @@
+    *{
+      box-sizing: border-box;
+    }
+
     body{
       margin: 0;
       font-family: Arial, sans-serif;
@@ -8,6 +12,16 @@
       scroll-behavior: smooth;
 
      }
+
+    .top-container{
+       display: flex;
+       flex-wrap: wrap;  
+       justify-content:space-evenly;
+       gap:5px;
+       padding: 10px 0;
+       margin: 10px 0;
+      
+    } 
 
     .navbar {
       position: fixed;
@@ -106,6 +120,7 @@
     justify-content: center;
     display: flex;
     transition: transform 0.3s ease-in-out;
+   
     
    }
 
