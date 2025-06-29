@@ -1,4 +1,4 @@
- body {
+body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: black;
@@ -51,20 +51,6 @@ html {
       padding: 100px 20px 80px 20px;
     }
 
-    .box {
-      display: inline-block;
-      width: 45%;
-      background-color: #f0f0f0;
-      padding: 20px;
-      margin: 10px;
-      vertical-align: top;
-      border-radius: 8px;
-    }
-
-    .box h2 {
-      margin-top: 0;
-    }
-
     .btn {
       background-color: rgb(3, 102, 53);
       color: white;
@@ -83,12 +69,7 @@ html {
       height: 75%;
     }
 
-    .row .box {
-      padding: 20px;
-      margin: 10px;
-      
-      
-    }
+   
 
     .footer {
         position: fixed;
@@ -103,7 +84,7 @@ html {
         z-index: 1000;
     }
 
-    button {
+  button {
       background-color: teal;
       padding: 10px;
       color: white;
@@ -111,7 +92,7 @@ html {
       border-radius: 10%;
     }
 
-   #logo{
+  #logo{
     background-color: black;
     padding: 30px;
     align-items: center;
@@ -119,7 +100,7 @@ html {
   
    }
 
-   #pic{
+  #pic{
     align-items: center;
     padding:10px;
     justify-content: center;
@@ -128,19 +109,19 @@ html {
     
    }
 
-   #pic:hover {
+  #pic:hover {
    transform: scale(1.1);
    }
 
-   .l1{
+  .l1{
     transition: transform 0.2s ease-in-out;
    }
 
-   .l1:hover{
+  .l1:hover{
     transform: scale(1.2);
    }
 
-   #ab{
+  #ab{
     color:white;
     background-color: black;
     padding:30px;
@@ -148,21 +129,21 @@ html {
     border-radius: 12px;
    }
 
-   .education{
+  .education{
     color: white;
     background-color: black;
     padding: 30px;
     margin: 10px;
     border-radius: 12px;
    }
-   .technical{
+  .technical{
     color: white;
     background-color: black;
     padding: 30px;
     margin:10px;
     border-radius: 12px;
    }
-    .Tech-profile{
+  .Tech-profile{
     color: white;
     background-color: black;
     padding: 30px;
@@ -170,13 +151,13 @@ html {
     border-radius: 12px;
    }
 
-   .l{
+  .l{
     padding:10px;
     margin:10px;
     gap:20px;
    }
 
-    .proj-img{
+  .proj-img{
   
     background-color: black;
     padding: 7px;
@@ -189,6 +170,61 @@ html {
    }
 
 
+/*-------------------Mern div box-----------------------------------*/
+    .box1 {
+      display: inline-block;
+      width: 45%;
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin: 10px;
+      vertical-align: top;
+      border-radius: 8px;
+    }
+    .box1 h2 {
+      margin-top: 0;
+    }
+/*-------------------projects div box-----------------------------------*/
+    .box2 {
+      display: inline-block;
+      width: 45%;
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin: 10px;
+      vertical-align: top;
+      border-radius: 8px;
+    }
+    .row .box2 {
+      padding: 20px;
+      margin: 10px;
+    }
+/*-------------------services div box-----------------------------------*/
+    .box3{
+      display: inline-block;
+      width: 45%;
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin: 10px;
+      vertical-align: top;
+      border-radius: 8px;
+    }
+    .row .box3 {
+      padding: 20px;
+      margin: 10px;
+    }
+/*-------------------contacts div box-----------------------------------*/
+    .box4{
+      display: inline-block;
+      width: 45%;
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin: 10px;
+      vertical-align: top;
+      border-radius: 8px;
+    }
+    .row .box4 {
+      padding: 20px;
+      margin: 10px;
+    }
 
 
 
