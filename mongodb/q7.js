@@ -310,6 +310,56 @@ db.studentInfo.aggregate([
    
 ])
 
+//---------------------------------------------------------
+//condition statements in mongodb
+db.employees.aggregate([
+    {$project:{
+        _id:0,
+        name:1,
+        salary:1,
+        Grade:{$cond:[{$gt:["$salary",3000]},"Grade A","Grade B"]}
+    }},   
+])
+
+db.employees.aggregate([
+    {$project:{
+        _id:0,
+        name:1,
+        salary:1,
+        Grade:{$cond:
+            {
+            if:{$gt:["$salary",3000]},
+            then:"Grade A",
+            else:"Grade B"}}
+            }}, 
+    {$out:"GradeWiseSalary"}  //store results in new collection
+])
+
+//-------------------------------------------------------------------
+db.createView("viewname","collectionname",[query])
+
+db.createView("salaryview","employees",[//view store data dynamically
+    {$project:{
+        _id:0,
+        name:1,
+        department:1,
+        salary:1,
+        Grade:{$cond:
+            {
+            if:{$gt:["$salary",3000]},
+            then:"Grade A",
+            else:"Grade B"}}
+            }}, 
+     
+])
+ db.salaryview.find()
+ db.salaryview.drop()
+ //create//drop//modify//find
+ //view...it is a virtual,temporary
+
+ //-----------------------------------------------------------------
+ 
+
 
 
 
