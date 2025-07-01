@@ -32,6 +32,7 @@
 
 //replica set--
 // mongosh "mongodb://localhost:27018,localhost:27019,localhost:27020/?replicaSet=rs1"
+//it opens the primary set from above command
 
 // show dbs
 // use mytestdb
