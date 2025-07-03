@@ -8,7 +8,7 @@ app.listen(8080,()=>{
 //middleware
 const logger = (req,res,next)=>{
 req.msg="Hello";
-next();
+next();                                //goes to actual api
 }
 //app.use(logger);
 
@@ -18,4 +18,20 @@ app.get("/",(req,res)=>{
 
 app.get("/products",logger,(req,res)=>{   //api...middleware...callback
     res.end(req.msg+" Products")
+})
+
+//-----------------------------------------------------------------------------------
+const auth = (req,res,next)=>
+{                                            //client-------->middleware-------->server
+const name=req.params.name;
+if(name==="john"){
+         next();
+    }
+    else{
+        res.send("ACCESS DENIED");
+    }
+}
+app.get("/:name",auth,(req,res)=>{
+    res.send("Hello World");
+
 })
