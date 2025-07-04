@@ -15,6 +15,7 @@ console.log("Server Started");
 app.use(express.json())            
 
 let users=[];
+
 //Authorization middleware
 const auth =(req,res,next)=>{
     if(req.headers.authorization !==""){
