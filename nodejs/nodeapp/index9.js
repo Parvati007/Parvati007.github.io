@@ -54,7 +54,7 @@ app.get("/users",authenticate,authorize("admin"),(req,res)=>{
 
 app.post("/register",(req,res)=>{ 
   const {name,email,password,role}=req.body;
-  const hashedpwd =  bcrypt.hash(password,10);
+  const hashedpwd = bcrypt.hash(password,10);
   const user = {
     name,
     email,
@@ -64,3 +64,4 @@ app.post("/register",(req,res)=>{
   users.push(req.body);
   res.json(user);
 })
+

@@ -6,7 +6,7 @@ app.listen(8080,()=>
 console.log("Server Started");
 })
 
-app.use(express.json())            //middleware
+app.use(express.json())                                 //middleware
 
 let products=[]
 app.post("/",(req,res)=>{                              //adding products
