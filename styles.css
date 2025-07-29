@@ -159,8 +159,8 @@
    }
 
   .proj-img{
-    height: 200px; /* Fixed height for uniformity */
-    overflow: hidden; /* Hide overflow */
+    height: 200px; 
+    overflow: hidden; 
     background-color: black;
     padding: 7px;
     transition: transform 0.3s ease-in-out;
@@ -172,15 +172,14 @@
    }
 
    .proj-img img {
-    width: 100%; /* Make images responsive */
-    height: 100%; /* Fill the container */
-    object-fit: cover; /* Maintain aspect ratio */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
    }
 
 
 /*-------------------MERN div box-----------------------------------*/
     .box1 {
-      /* display: inline-block; */
       width: 45%;
       background-color: #f0f0f0;
       padding: 20px;
@@ -193,7 +192,7 @@
       margin-top: 0;
     }
     .box1 img {
-     width: 95%; /* Make images responsive */
+     width: 95%; 
      height: auto;
     }
     #pic{
@@ -208,9 +207,9 @@
      }
 
      #pic img {
-     width: 100%; /* Make profile image responsive */
+     width: 100%; 
      height: auto;
-     max-width: 500px; /* Set a max width for the profile image */
+     max-width: 500px; 
      border-radius: 50%; 
    }
 /*-------------------projects div box-----------------------------------*/
@@ -220,7 +219,7 @@
       padding: 20px;
       margin: 10px;
       border-radius: 8px;
-      text-align: center; /* Center text */
+      text-align: center; 
     }
     .row .box2 {
       padding: 20px;
@@ -255,7 +254,6 @@
 
 /*-----------------------------------------------------------------------*/
 
-  /* Media Queries for Responsiveness */
   @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -271,13 +269,13 @@
   }
 
   .box2 {
-    flex: 1 1 100%; /* Full width on smaller screens */
+    flex: 1 1 100%; 
   }
   .box3 {
-    flex: 1 1 100%; /* Full width on smaller screens */
+    flex: 1 1 100%; 
   }
   .box4 {
-    flex: 1 1 100%; /* Full width on smaller screens */
+    flex: 1 1 100%; 
   }
 }
 
